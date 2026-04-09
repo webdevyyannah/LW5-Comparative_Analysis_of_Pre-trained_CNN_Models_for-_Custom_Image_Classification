@@ -1,1 +1,1 @@
-# Laboratory Work 5 - CSC
+# Laboratory Work 5 - CSC 120
