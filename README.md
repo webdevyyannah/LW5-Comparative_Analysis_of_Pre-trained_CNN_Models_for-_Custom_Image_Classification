@@ -26,7 +26,7 @@
   with ImageNet pre-trained weights, which explains its perfect performance
   on a well-curated dataset.
 
-**Your 1st Model (LW1 - Fashion MNIST)**
+**1st Model (LW1 - Fashion MNIST)**
 - Architecture: Simple Dense Neural Network
   (Flatten → Dense 256 → Dense 64 → Dense 10)
 - Dataset: Fashion MNIST (10 classes, 60,000 training / 10,000 test images)
@@ -37,7 +37,7 @@
   of CNN layers limited its feature extraction capability, explaining the
   lower accuracy compared to CNN-based models.
 
-**Your 2nd Model (LW3 - Custom CNN Baseline)**
+**2nd Model (LW3 - Custom CNN Baseline)**
 - Architecture: Custom CNN
   (Rescaling → Conv2D 16 → MaxPool → Conv2D 32 → MaxPool →
   Conv2D 64 → MaxPool → Flatten → Dense 128 → Dense 20)
@@ -61,7 +61,7 @@
   The lower accuracy is due to the conservative learning rate and the
   model needing more epochs to converge with the more complex architecture.
 
-**Your 3rd Model - The Good Model (MobileNetV2 - LW5)**
+**3rd Model - The Good Model (MobileNetV2 - LW5)**
 - Architecture: MobileNetV2 (frozen) + GlobalAveragePooling2D +
   Dense 128 (relu) + Dropout 0.5 + Dense 20
 - Dataset: 20 tree species, 5,002 images (80/20 split)
