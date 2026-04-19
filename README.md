@@ -78,6 +78,28 @@
 
 ---
 
+## 📊 Visualizations
+
+### MobileNetV2
+- [Confusion Matrix - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/confusion_matrix_mobilenetv2.png)
+- [ROC Curve - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/roc_curve_mobilenetv2.png)
+- [Accuracy & Loss - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_mobilenetv2.png)
+- [Grad-CAM - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_mobilenetv2.png)
+
+### EfficientNetB0
+- [Confusion Matrix - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/confusion_matrix_efficientnetb0.png)
+- [ROC Curve - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/roc_curve_efficientnetb0.png)
+- [Accuracy & Loss - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_efficientnetb0.png)
+- [Grad-CAM - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_efficientnetb0.png)
+
+### ResNet50
+- [Confusion Matrix - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/confusion_matrix_resnet50.png)
+- [ROC Curve - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/roc_curve_resnet50.png)
+- [Accuracy & Loss - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_resnet50.png)
+- [Grad-CAM - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_resnet50.png)
+
+---
+
 ## Guide Questions and Answers
 
 ---
@@ -359,3 +381,14 @@ browser without installing any software. Alternatively, the Keras model can be d
 as a REST API using frameworks such as FastAPI or Flask, hosted on cloud platforms
 like Google Cloud Run or AWS Lambda, and consumed by a React or Flutter front-end
 application that sends images and receives predictions in JSON format.
+
+
+### 🔗 Links
+
+| Resource | Link |
+|---|---|
+| 📓 Colab Notebook | [View Notebook](https://colab.research.google.com/drive/1OzzVb3h0zya8BkSI8oine7IKYj-m1AoV?usp=sharing) |
+| 📊 Visualizations | [View Visualizations](#visualizations) |
+| 📄 README | [View README](YOUR_GITHUB_REPO_LINK/blob/main/README.md) |
+
+---
