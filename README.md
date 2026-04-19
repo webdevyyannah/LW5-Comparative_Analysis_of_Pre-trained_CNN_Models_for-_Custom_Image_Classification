@@ -2,13 +2,13 @@
 
 ## Complete Performance Comparison Table
 
-| Model | Train Accuracy | Train Loss | Test/Val Accuracy | Test/Val Loss | Precision | Recall | F1-Score | AUC |
+| Model | Train Accuracy | Train Loss | Val Accuracy | Val Loss | Precision | Recall | F1-Score | AUC |
 |---|---|---|---|---|---|---|---|---|
-| **Teachable Machine** | ~1.00 | ~0.05 | 1.00 | ~0.10 | 1.00 | 1.00 | 1.00 | N/A |
-| **1st Model** (LW1 - Fashion MNIST) | 0.9190 | 0.2200 | 0.8894 | 0.3780 | N/A | N/A | N/A | N/A |
+| **Teachable Machine** (LW2-A) | ~1.00 | ~0.05 | 1.00 | ~0.10 | 1.00 | 1.00 | 1.00 | N/A |
+| **1st Model** (LW1 - Fashion MNIST Dense NN) | 0.9190 | 0.2200 | 0.8894 | 0.3780 | N/A | N/A | N/A | N/A |
 | **2nd Model** (LW3 - Custom CNN Baseline) | 0.9992 | 0.0072 | 0.9600 | 0.2420 | 0.84 | 0.82 | 0.82 | 0.9530 |
-| **Enhancement** (LW4 - Improved CNN) | 0.4260 | 1.8752 | 0.4700 | 1.7326 | N/A | N/A | N/A | N/A |
-| **3rd Model - The Good Model** (MobileNetV2) | 0.8788 | 0.4991 | 0.9330 | 0.3474 | 0.9351 | 0.9330 | 0.9333 | 0.9888 |
+| **Enhancement** (LW4 - Improved CNN + BatchNorm + Dropout) | 0.4520 | 1.8052 | 0.5470 | 1.4592 | 0.57 | 0.55 | 0.54 | 0.8687 |
+| **3rd Model - The Good Model** (LW5 - MobileNetV2) | 0.8788 | 0.4991 | 0.9330 | 0.3474 | 0.9351 | 0.9330 | 0.9333 | 0.9888 |
 | **Pre-trained Model 1** (MobileNetV2) | 0.8788 | 0.4991 | 0.9330 | 0.3474 | 0.9351 | 0.9330 | 0.9333 | 0.9888 |
 | **Pre-trained Model 2** (EfficientNetB0) | 0.0495 | 2.9972 | 0.0460 | 2.9970 | 0.0012 | 0.0350 | 0.0024 | 0.5024 |
 | **Pre-trained Model 3** (ResNet50) | 0.0942 | 2.9342 | 0.0770 | 2.9272 | 0.0400 | 0.0700 | 0.0300 | 0.5983 |
@@ -24,18 +24,18 @@
 - Result: 100% accuracy on all 20 classes with zero misclassifications
 - Note: Teachable Machine uses MobileNet internally as its base architecture
   with ImageNet pre-trained weights, which explains its perfect performance
-  on a well-curated dataset.
+  on a well-curated dataset. AUC is not directly available in Teachable Machine.
 
-**1st Model (LW1 - Fashion MNIST)**
+**1st Model (LW1 - Fashion MNIST Dense NN)**
 - Architecture: Simple Dense Neural Network
   (Flatten → Dense 256 → Dense 64 → Dense 10)
 - Dataset: Fashion MNIST (10 classes, 60,000 training / 10,000 test images)
 - Parameters: 22 epochs, Adam optimizer
 - Result: Train Accuracy 0.9190, Test Accuracy 0.8894, Test Loss 0.3780
-- Note: This was a basic fully-connected neural network with no
-  convolutional layers, trained on grayscale 28x28 images. The absence
-  of CNN layers limited its feature extraction capability, explaining the
-  lower accuracy compared to CNN-based models.
+- Note: This was a basic fully-connected neural network with no convolutional
+  layers, trained on grayscale 28x28 images. Precision, Recall, F1, and AUC
+  were not computed in LW1 as the activity focused only on basic accuracy
+  and loss evaluation.
 
 **2nd Model (LW3 - Custom CNN Baseline)**
 - Architecture: Custom CNN
@@ -45,34 +45,36 @@
 - Parameters: 10 epochs, Adam optimizer
 - Result: Train Accuracy 0.9992, Val Accuracy 0.9600, Val Loss 0.2420
 - Note: This model showed signs of overfitting (train accuracy 99.92% vs
-  val accuracy 96%), but still achieved strong validation performance.
-  The LW4 evaluation further revealed per-class metrics:
-  Precision 0.84, Recall 0.82, F1 0.82, AUC 0.9530.
+  val accuracy 96%). The Precision (0.84), Recall (0.82), F1 (0.82), and
+  AUC (0.9530) were computed in LW4 Activity 1 by evaluating the saved
+  model from LW3.
 
 **Enhancement (LW4 Activity 3 - Improved CNN)**
-- Architecture: Improved CNN with Data Augmentation, Batch Normalization,
-  Dropout (0.4 + 0.5), Dense 256, Early Stopping
+- Architecture: Improved CNN with Data Augmentation (RandomFlip,
+  RandomRotation, RandomZoom, RandomContrast), Batch Normalization,
+  Dropout (0.4 + 0.5), Dense 256, Early Stopping (patience=3)
 - Dataset: 20 tree species, 5,002 images (80/20 split)
-- Parameters: 20 epochs, Adam lr=0.0001, Early Stopping patience=3
-- Result: Train Accuracy 0.4260, Val Accuracy 0.4700, Val Loss 1.7326
-- Note: Despite lower accuracy numbers compared to the baseline, this
-  model showed healthy generalization behavior — validation accuracy
-  consistently exceeded training accuracy, indicating no overfitting.
-  The lower accuracy is due to the conservative learning rate and the
-  model needing more epochs to converge with the more complex architecture.
+- Parameters: 20 epochs, Adam lr=0.0001
+- Result: Train Accuracy 0.4520, Val Accuracy 0.5470, Val Loss 1.4592,
+  Precision 0.57, Recall 0.55, F1 0.54, AUC 0.8687
+- Note: Despite lower accuracy compared to the LW3 baseline, the enhanced
+  model showed healthier generalization — validation accuracy consistently
+  exceeded or matched training accuracy across all 20 epochs, indicating
+  no overfitting. The lower overall accuracy is due to the conservative
+  learning rate (0.0001) and the model still converging at epoch 20.
 
-**3rd Model - The Good Model (MobileNetV2 - LW5)**
-- Architecture: MobileNetV2 (frozen) + GlobalAveragePooling2D +
-  Dense 128 (relu) + Dropout 0.5 + Dense 20
+**3rd Model - The Good Model (LW5 - MobileNetV2)**
+- Architecture: MobileNetV2 (frozen ImageNet weights) +
+  GlobalAveragePooling2D + Dense 128 (relu) + Dropout 0.5 + Dense 20
 - Dataset: 20 tree species, 5,002 images (80/20 split)
 - Parameters: 10 epochs, Adam lr=0.0001, Early Stopping patience=3
 - Result: Train Accuracy 0.8788, Val Accuracy 0.9330,
   Precision 0.9351, Recall 0.9330, F1 0.9333, AUC 0.9888
 - Note: MobileNetV2 is designated as "The Good Model" because it achieved
-  the best balance of accuracy, generalization, and efficiency among all
-  models tested across all laboratory works. Its ImageNet pre-trained
-  weights provided strong feature representations that transferred
-  effectively to the 20-class tree classification task.
+  the best balance of accuracy, generalization, and efficiency across all
+  laboratory works. Its ImageNet pre-trained weights transferred effectively
+  to the 20-class tree classification task, outperforming all custom-built
+  CNN models significantly.
 
 ---
 
