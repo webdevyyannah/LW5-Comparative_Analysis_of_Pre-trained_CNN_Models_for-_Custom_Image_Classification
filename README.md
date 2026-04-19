@@ -81,22 +81,22 @@
 ## 📊 Visualizations
 
 ### MobileNetV2
-- [Confusion Matrix - MobileNetV2](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Accuracy%20%26%20Loss%20-%20EfficientNetB0.png)
-- [ROC Curve - MobileNetV2]()
-- [Accuracy & Loss - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_mobilenetv2.png)
-- [Grad-CAM - MobileNetV2](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_mobilenetv2.png)
+- [Confusion Matrix - MobileNetV2](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/confusion_matrix-MobileNetV2.png)
+- [ROC Curve - MobileNetV2](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/ROC%20Curve%20-%20MobileNetV2.png)
+- [Accuracy & Loss - MobileNetV2](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Accuracy%20%26%20Loss%20-%20MobileNetV2.png)
+- [Grad-CAM - MobileNetV2](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Grad-CAM%20-%20MobileNetV2.png)
 
 ### EfficientNetB0
-- [Confusion Matrix - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/confusion_matrix_efficientnetb0.png)
-- [ROC Curve - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/roc_curve_efficientnetb0.png)
-- [Accuracy & Loss - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_efficientnetb0.png)
-- [Grad-CAM - EfficientNetB0](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_efficientnetb0.png)
+- [Confusion Matrix - EfficientNetB0](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/confusion_matrix-EfficientB0.png)
+- [ROC Curve - EfficientNetB0](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/ROC%20Curve%20-%20EfficientNetB0.png)
+- [Accuracy & Loss - EfficientNetB0](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Accuracy%20%26%20Loss%20-%20EfficientNetB0.png)
+- [Grad-CAM - EfficientNetB0](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Grad-CAM%20-%20EfficientNetB0.png)
 
 ### ResNet50
-- [Confusion Matrix - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/confusion_matrix_resnet50.png)
-- [ROC Curve - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/roc_curve_resnet50.png)
-- [Accuracy & Loss - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/accuracy_loss_resnet50.png)
-- [Grad-CAM - ResNet50](YOUR_GITHUB_REPO_LINK/blob/main/visualizations/gradcam_resnet50.png)
+- [Confusion Matrix - ResNet50](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/confusion-matrix_ResNet50.png)
+- [ROC Curve - ResNet50](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/ROC%20Curve%20-%20ResNet50.png)
+- [Accuracy & Loss - ResNet50](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Accuracy%20%26%20Loss%20-%20ResNet50.png)
+- [Grad-CAM - ResNet50](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/blob/main/Visualizations/Grad-CAM%20-%20ResNet50.png)
 
 ---
 
@@ -388,7 +388,6 @@ application that sends images and receives predictions in JSON format.
 | Resource | Link |
 |---|---|
 | 📓 Colab Notebook | [View Notebook](https://colab.research.google.com/drive/1OzzVb3h0zya8BkSI8oine7IKYj-m1AoV?usp=sharing) |
-| 📊 Visualizations | [View Visualizations](#visualizations) |
-| 📄 README | [View README](YOUR_GITHUB_REPO_LINK/blob/main/README.md) |
+| 📊 Visualizations | [View Visualizations](https://github.com/webdevyyannah/LW5-Comparative_Analysis_of_Pre-trained_CNN_Models_for-_Custom_Image_Classification/tree/main/Visualizations) |
 
 ---
