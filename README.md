@@ -4,7 +4,7 @@
 
 | Model | Train Accuracy | Train Loss | Val Accuracy | Val Loss | Precision | Recall | F1-Score | AUC |
 |---|---|---|---|---|---|---|---|---|
-| **Teachable Machine** (LW2-A) | ~1.00 | ~0.05 | 1.00 | ~0.10 | 1.00 | 1.00 | 1.00 | N/A |
+| **Teachable Machine** | ~1.00 | ~0.05 | 1.00 | ~0.10 | 1.00 | 1.00 | 1.00 | N/A |
 | **1st Model** (LW1 - Fashion MNIST Dense NN) | 0.9190 | 0.2200 | 0.8894 | 0.3780 | N/A | N/A | N/A | N/A |
 | **2nd Model** (LW3 - Custom CNN Baseline) | 0.9992 | 0.0072 | 0.9600 | 0.2420 | 0.84 | 0.82 | 0.82 | 0.9530 |
 | **Enhancement** (LW4 - Improved CNN + BatchNorm + Dropout) | 0.4520 | 1.8052 | 0.5470 | 1.4592 | 0.57 | 0.55 | 0.54 | 0.8687 |
